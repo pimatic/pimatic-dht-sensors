@@ -1,11 +1,7 @@
 pimatic-dhtxx
 ================
 
-Support for the dhtxx temperature/hunidity sensor.
-
-### Wiring
-
-
+Support for the DHTxx temperature/humidity sensor.
 
 ### Example config
 
