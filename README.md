@@ -25,3 +25,5 @@ Then add a sensor for your device to the devices section:
   "interval": 10000
 }
 ```
+
+Thank you <a href="https://github.com/momenso">David Jose</a> for <a href="https://github.com/momenso/node-dht-sensor">node-dht-sensor</a> and <a href="https://github.com/sweetpi">sweet pi</a> for inspiration and his work on best houme automatization software <a href="https://github.com/pimatic/pimatic">Pimatic</a>.
