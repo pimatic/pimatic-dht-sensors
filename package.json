@@ -1,0 +1,46 @@
+{
+  "name": "pimatic-dhtxx",
+  "description": "Support for the DHTxx temperature/humidity sensor.",
+  "author": {
+    "name": "Marek Kail",
+    "email": "marek@kail.cz"
+  },
+  "main": "dhtxx",
+  "files": [
+    "dhtxx.coffee",
+    "README.md",
+    "dhtxx-config-schema.coffee",
+    "device-config-schema.coffee",
+    "LICENSE"
+  ],
+  "version": "0.8.0",
+  "homepage": "http://github.com/wutu/pimatic-dhtxx",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wutu/pimatic-dhtxx.git"
+  },
+  "configSchema": "dhtxx-config-schema.coffee",
+  "dependencies": {
+    "node-dht-sensor": "0.0.5"
+  },
+  "peerDependencies": {
+    "pimatic": "0.8.*"
+  },
+  "engines": {
+    "node": ">0.8.x",
+    "npm": ">1.1.x"
+  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wutu/pimatic-dhtxx.git"
+  },
+  "keywords": [
+    "pimatic"
+  ],
+  "bugs": {
+    "url": "https://github.com/wutu/pimatic-dhtxx/issues"
+  }
+}
