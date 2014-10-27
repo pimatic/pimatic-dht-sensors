@@ -17,8 +17,8 @@ module.exports = (env) ->
       deviceConfigDef = require("./device-config-schema")
 
       @framework.deviceManager.registerDeviceClass("DHTxxSensor", {
-        configDef: deviceConfigDef.DHTxxSensor, 
-        createCallback: (config, lastState) => 
+        configDef: deviceConfigDef.DHTxxSensor,
+        createCallback: (config, lastState) ->
           device = new DHTxxSensor(config, lastState)
           return device
       })
