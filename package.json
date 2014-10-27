@@ -1,7 +1,9 @@
 {
   "name": "pimatic-dhtxx",
   "description": "Support for the DHTxx temperature/humidity sensor.",
-  "author": "Marek Kail <reg@kail.cz>",
+  "author_name": "Marek Kail <reg@kail.cz>",
+  "author_url": "https://github.com/wutu",
+  "npmUser": "wutu",
   "main": "dhtxx",
   "files": [
     "dhtxx.coffee",
@@ -9,7 +11,7 @@
     "dhtxx-config-schema.coffee",
     "device-config-schema.coffee"
   ],
-  "version": "0.8.1",
+  "version": "0.8.2",
   "homepage": "http://github.com/wutu/pimatic-dhtxx",
   "repository": {
     "type": "git",
