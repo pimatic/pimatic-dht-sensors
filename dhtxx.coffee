@@ -43,7 +43,7 @@ module.exports = (env) ->
       @name = config.name
       @type = config.type
       @gpio = config.gpio
-      @temperature = lastState?.temperature?.value
+      @interval = config.interval
       super()
 
       @requestValue()
@@ -53,11 +53,9 @@ module.exports = (env) ->
       sensorLib.initialize @type, @gpio
       readout = sensorLib.read()
       temperature = parseInt(readout.temperature.toFixed(1), 10)
-      @emit "temperature", temperature
       humidity = parseInt(readout.humidity.toFixed(1), 10)
+      @emit "temperature", temperature
       @emit "humidity", humidity
-
-#     @valid = (readout.isValid)
 
     getTemperature: -> Promise.resolve(@temperature)
     getHumidity: -> Promise.resolve(@humidity)

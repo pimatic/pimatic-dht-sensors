@@ -12,7 +12,7 @@ module.exports = {
         description: "The gpio pin"
         type: "number"
       interval:
-        interval: "Interval in ms so read the sensor"
+        interval: "Interval in ms so read the sensor, the minimal reading interal should be 2500"
         type: "integer"
         default: 10000
   }
