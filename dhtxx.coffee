@@ -25,8 +25,8 @@ module.exports = (env) ->
 
 
   class DHTxxSensor extends env.devices.TemperatureSensor
-    temperature: null
-    humidity: null
+    _temperature: null
+    _humidity: null
 
     attributes:
       temperature:
@@ -43,22 +43,23 @@ module.exports = (env) ->
       @name = config.name
       @type = config.type
       @gpio = config.gpio
-      @interval = config.interval
+      @_temperature = lastState?.temperature?.value
+      @_humidity = lastState?.humidity?.value
       super()
 
       @requestValue()
       setInterval( ( => @requestValue() ), @config.interval)
 
     requestValue: ->
-      sensorLib.initialize @type, @gpio
+      sensorLib.initializeAsync(@type, @gpio)
       readout = sensorLib.read()
-      temperature = parseInt(readout.temperature.toFixed(1), 10)
-      humidity = parseInt(readout.humidity.toFixed(1), 10)
-      @emit "temperature", temperature
-      @emit "humidity", humidity
+      @_temperature = readout.temperature
+      @_humidity = readout.humidity
+      @emit "temperature", @_temperature
+      @emit "humidity", @_humidity
 
-    getTemperature: -> Promise.resolve(@temperature)
-    getHumidity: -> Promise.resolve(@humidity)
+    getTemperature: -> Promise.resolve(@_temperature)
+    getHumidity: -> Promise.resolve(@_humidity)
 
   plugin = new DHTxxPlugin
 
