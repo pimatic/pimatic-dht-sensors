@@ -16,15 +16,15 @@ module.exports = (env) ->
 
       deviceConfigDef = require("./device-config-schema")
 
-      @framework.deviceManager.registerDeviceClass("DHTxxSensor", {
+      @framework.deviceManager.registerDeviceClass("DHTSensor", {
         configDef: deviceConfigDef.DHTxxSensor,
         createCallback: (config, lastState) ->
-          device = new DHTxxSensor(config, lastState)
+          device = new DHTSensor(config, lastState)
           return device
       })
 
 
-  class DHTxxSensor extends env.devices.TemperatureSensor
+  class DHTSensor extends env.devices.TemperatureSensor
     _temperature: null
     _humidity: null
 
@@ -61,6 +61,6 @@ module.exports = (env) ->
     getTemperature: -> Promise.resolve(@_temperature)
     getHumidity: -> Promise.resolve(@_humidity)
 
-  plugin = new DHTxxPlugin
+  plugin = new DHTPlugin
 
   return plugin

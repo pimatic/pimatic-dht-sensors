@@ -1,9 +1,13 @@
 {
-  "name": "pimatic-dhtxx",
-  "description": "Support for the DHTxx temperature/humidity sensor.",
-  "author_name": "Marek Kail <reg@kail.cz>",
-  "author_url": "https://github.com/wutu",
-  "npmUser": "wutu",
+  "name": "pimatic-dht-sesnors",
+  "description": "Support for the DHTxx temperature/humidity sensors.",
+  "author": "Oliver Schneider <oliverschneider89+sweetpi@gmail.com> (http://sweetpi.de)",
+  "contributors": [
+    { "name" : "Marek Kail"
+    , "email" : "reg@kail.cz"
+    , "url" : "https://github.com/wutu"
+    }
+  ],
   "main": "dhtxx",
   "files": [
     "dhtxx.coffee",
@@ -12,14 +16,14 @@
     "device-config-schema.coffee"
   ],
   "version": "0.8.4",
-  "homepage": "http://github.com/wutu/pimatic-dhtxx",
+  "homepage": "http://github.com/pimatic/pimatic-dht-sesnors",
   "repository": {
     "type": "git",
-    "url": "git://github.com/wutu/pimatic-dhtxx.git"
+    "url": "git://github.com/pimatic/pimatic-dht-sesnors.git"
   },
   "configSchema": "dhtxx-config-schema.coffee",
   "dependencies": {
-    "node-dht-sensor": "^0.0.5"
+    "node-dht-sensor": "^0.0.7"
   },
   "peerDependencies": {
     "pimatic": "0.8.*"
@@ -29,7 +33,7 @@
     "npm": ">1.1.x"
   },
   "bugs": {
-    "url": "https://github.com/wutu/pimatic-dhtxx/issues"
+    "url": "https://github.com/pimatic/pimatic/issues"
   },
   "devDependencies": {},
   "scripts": {

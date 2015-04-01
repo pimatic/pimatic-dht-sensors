@@ -1,16 +1,16 @@
 module.exports = {
-  title: "pimatic-dhtxx device config schemas"
-  DHTxxSensor: {
-    title: "DHTxxSensor config options"
+  title: "pimatic-dht-sensors device config schemas"
+  DHTSensor: {
+    title: "DHTSensor config options"
     type: "object"
     extensions: ["xLink"]
     properties:
       type:
         description: "the type of the sensor (11 or 22)"
-        type: "number"
+        type: "integer"
       gpio:
         description: "The gpio pin"
-        type: "number"
+        type: "integer"
       interval:
         interval: "Interval in ms so read the sensor, the minimal reading interal should be 2500"
         type: "integer"

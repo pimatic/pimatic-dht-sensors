@@ -1,4 +1,4 @@
-pimatic-dhtxx
+pimatic-dht-sensors
 ================
 
 Support for the DHTxx temperature/humidity sensor.
@@ -9,7 +9,7 @@ Add the plugin to the plugin section:
 
 ```json
 { 
-  "plugin": "dhtxx"
+  "plugin": "dht-sensors"
 }
 ```
 
@@ -18,12 +18,12 @@ Then add a sensor for your device to the devices section:
 ```json
 {
   "id": "my-sensor",
-  "name": "dhtxx example",
-  "class": "DHTxxSensor",
+  "name": "dht22 example",
+  "class": "DHTSensor",
   "type": 22,
   "gpio": 18,
   "interval": 60000
 }
 ```
 
-Thank you <a href="https://github.com/momenso">David Jose</a> for <a href="https://github.com/momenso/node-dht-sensor">node-dht-sensor</a> and <a href="https://github.com/sweetpi">sweet pi</a> for inspiration and his work on best automatization software <a href="http://pimatic.org/">Pimatic</a>.
+Thank you <a href="https://github.com/momenso">David Jose</a> for <a href="https://github.com/momenso/node-dht-sensor">node-dht-sensor</a>
