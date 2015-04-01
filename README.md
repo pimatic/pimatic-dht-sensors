@@ -1,7 +1,7 @@
 pimatic-dht-sensors
 ================
 
-Support for the DHTxx temperature/humidity sensor.
+Support for the DHT11 and DHT22 temperature and humidity sensor.
 
 ### Example config
 
