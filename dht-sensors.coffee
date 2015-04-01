@@ -7,17 +7,15 @@ module.exports = (env) ->
   assert = env.require 'cassert'
 
   sensorLib = require 'node-dht-sensor'
-  Promise.promisifyAll(sensorLib)
 
-
-  class DHTxxPlugin extends env.plugins.Plugin
+  class DHTPlugin extends env.plugins.Plugin
 
     init: (app, @framework, @config) =>
 
       deviceConfigDef = require("./device-config-schema")
 
       @framework.deviceManager.registerDeviceClass("DHTSensor", {
-        configDef: deviceConfigDef.DHTxxSensor,
+        configDef: deviceConfigDef.DHTSensor,
         createCallback: (config, lastState) ->
           device = new DHTSensor(config, lastState)
           return device
@@ -39,10 +37,8 @@ module.exports = (env) ->
         unit: '%'
 
     constructor: (@config, lastState) ->
-      @id = config.id
-      @name = config.name
-      @type = config.type
-      @gpio = config.gpio
+      @id = @config.id
+      @name = @config.name
       @_temperature = lastState?.temperature?.value
       @_humidity = lastState?.humidity?.value
       super()
@@ -51,12 +47,15 @@ module.exports = (env) ->
       setInterval( ( => @requestValue() ), @config.interval)
 
     requestValue: ->
-      sensorLib.initializeAsync(@type, @gpio)
-      readout = sensorLib.read()
-      @_temperature = readout.temperature
-      @_humidity = readout.humidity
-      @emit "temperature", @_temperature
-      @emit "humidity", @_humidity
+      try
+        readout = sensorLib.readSpec(@config.type, @config.pin)
+        @_temperature = readout.temperature
+        @_humidity = readout.humidity
+        @emit "temperature", @_temperature
+        @emit "humidity", @_humidity
+      catch err
+        env.logger.error("Error reading DHT-Sensor: #{err.message}")
+        env.logger.debug(err.stack)
 
     getTemperature: -> Promise.resolve(@_temperature)
     getHumidity: -> Promise.resolve(@_humidity)

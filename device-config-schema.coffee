@@ -8,8 +8,8 @@ module.exports = {
       type:
         description: "the type of the sensor (11 or 22)"
         type: "integer"
-      gpio:
-        description: "The gpio pin"
+      pin:
+        description: "The wiringPi pin"
         type: "integer"
       interval:
         interval: "Interval in ms so read the sensor, the minimal reading interal should be 2500"

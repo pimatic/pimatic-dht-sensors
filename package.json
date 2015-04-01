@@ -8,11 +8,11 @@
     , "url" : "https://github.com/wutu"
     }
   ],
-  "main": "dhtxx",
+  "main": "dht-sensors",
   "files": [
-    "dhtxx.coffee",
+    "dht-sensors.coffee",
     "README.md",
-    "dhtxx-config-schema.coffee",
+    "dht-sensors-config-schema.coffee",
     "device-config-schema.coffee"
   ],
   "version": "0.8.4",
@@ -21,9 +21,9 @@
     "type": "git",
     "url": "git://github.com/pimatic/pimatic-dht-sesnors.git"
   },
-  "configSchema": "dhtxx-config-schema.coffee",
+  "configSchema": "dht-sensors-config-schema.coffee",
   "dependencies": {
-    "node-dht-sensor": "^0.0.7"
+    "node-dht-sensor": "git+https://github.com/sweetpi/node-dht-sensor.git#master"
   },
   "peerDependencies": {
     "pimatic": "0.8.*"

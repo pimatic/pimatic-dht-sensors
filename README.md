@@ -3,6 +3,8 @@ pimatic-dht-sensors
 
 Support for the DHT11 and DHT22 temperature and humidity sensor.
 
+**This plugin requries [wiringPi to be installed](http://wiringpi.com/download-and-install/)!**
+
 ### Example config
 
 Add the plugin to the plugin section:
@@ -13,7 +15,8 @@ Add the plugin to the plugin section:
 }
 ```
 
-Then add a sensor for your device to the devices section:
+Then add a sensor for your device to the devices section. 
+The Plugin uses [wiringPi pin numbers](http://wiringpi.com/pins/).
 
 ```json
 {
@@ -21,9 +24,7 @@ Then add a sensor for your device to the devices section:
   "name": "dht22 example",
   "class": "DHTSensor",
   "type": 22,
-  "gpio": 18,
+  "pin": 1,
   "interval": 60000
 }
 ```
-
-Thank you <a href="https://github.com/momenso">David Jose</a> for <a href="https://github.com/momenso/node-dht-sensor">node-dht-sensor</a>
