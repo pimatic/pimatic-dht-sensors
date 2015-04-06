@@ -49,10 +49,13 @@ module.exports = (env) ->
     requestValue: ->
       try
         readout = sensorLib.readSpec(@config.type, @config.pin)
-        @_temperature = readout.temperature
-        @_humidity = readout.humidity
-        @emit "temperature", @_temperature
-        @emit "humidity", @_humidity
+        if readout.isValid
+          @_temperature = readout.temperature
+          @_humidity = readout.humidity
+          @emit "temperature", @_temperature
+          @emit "humidity", @_humidity
+        else
+          env.logger.debug("Couldn't read DHT-Sensor")
       catch err
         env.logger.error("Error reading DHT-Sensor: #{err.message}")
         env.logger.debug(err.stack)
