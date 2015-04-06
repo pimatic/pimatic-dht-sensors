@@ -1,5 +1,5 @@
 {
-  "name": "pimatic-dht-sesnors",
+  "name": "pimatic-dht-sensors",
   "description": "Support for the DHT11 and DHT22 temperature and humidity sensor.",
   "author": "Oliver Schneider <oliverschneider89+sweetpi@gmail.com> (http://sweetpi.de)",
   "contributors": [
