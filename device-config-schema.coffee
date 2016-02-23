@@ -3,7 +3,7 @@ module.exports = {
   DHTSensor: {
     title: "DHTSensor config options"
     type: "object"
-    extensions: ["xLink"]
+    extensions: ["xLink", "xAttributeOptions"]
     properties:
       type:
         description: "the type of the sensor (11 or 22)"
