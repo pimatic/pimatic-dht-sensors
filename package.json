@@ -3,9 +3,10 @@
   "description": "Support for the DHT11 and DHT22 temperature and humidity sensor.",
   "author": "Oliver Schneider <oliverschneider89+sweetpi@gmail.com> (http://sweetpi.de)",
   "contributors": [
-    { "name" : "Marek Kail"
-    , "email" : "reg@kail.cz"
-    , "url" : "https://github.com/wutu"
+    {
+      "name": "Marek Kail",
+      "email": "reg@kail.cz",
+      "url": "https://github.com/wutu"
     }
   ],
   "main": "dht-sensors",
@@ -15,7 +16,7 @@
     "dht-sensors-config-schema.coffee",
     "device-config-schema.coffee"
   ],
-  "version": "0.8.4",
+  "version": "0.8.5",
   "homepage": "http://github.com/pimatic/pimatic-dht-sesnors",
   "repository": {
     "type": "git",
