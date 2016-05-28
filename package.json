@@ -26,7 +26,7 @@
     "node-dht-sensor": "git+https://github.com/sweetpi/node-dht-sensor.git#master"
   },
   "peerDependencies": {
-    "pimatic": "0.8.*"
+    "pimatic": ">=0.8.0 <1.0.0"
   },
   "engines": {
     "node": ">0.8.x",
