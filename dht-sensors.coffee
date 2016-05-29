@@ -28,7 +28,7 @@ module.exports = (env) ->
 
     attributes:
       temperature:
-        description: "The messured temperature"
+        description: "The measured temperature"
         type: "number"
         unit: '°C'
       humidity:
@@ -44,7 +44,11 @@ module.exports = (env) ->
       super()
 
       @requestValue()
-      setInterval( ( => @requestValue() ), @config.interval)
+      @requestValueIntervalId = setInterval( ( => @requestValue() ), @config.interval)
+
+    destroy: () ->
+      clearInterval @requestValueIntervalId if @requestValueIntervalId?
+      super()
 
     requestValue: ->
       try
