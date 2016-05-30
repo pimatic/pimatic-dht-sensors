@@ -7,6 +7,10 @@
       "name": "Marek Kail",
       "email": "reg@kail.cz",
       "url": "https://github.com/wutu"
+    },
+    {
+      "name": "Marcus Wittig",
+      "url": "https://github.com/mwittig"
     }
   ],
   "main": "dht-sensors",
@@ -16,7 +20,7 @@
     "dht-sensors-config-schema.coffee",
     "device-config-schema.coffee"
   ],
-  "version": "0.8.5",
+  "version": "0.9.0",
   "homepage": "http://github.com/pimatic/pimatic-dht-sesnors",
   "repository": {
     "type": "git",
