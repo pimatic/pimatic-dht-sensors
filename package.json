@@ -21,10 +21,10 @@
     "device-config-schema.coffee"
   ],
   "version": "0.9.0",
-  "homepage": "http://github.com/pimatic/pimatic-dht-sesnors",
+  "homepage": "http://github.com/pimatic/pimatic-dht-sensors",
   "repository": {
     "type": "git",
-    "url": "git://github.com/pimatic/pimatic-dht-sesnors.git"
+    "url": "git://github.com/pimatic/pimatic-dht-sensors.git"
   },
   "configSchema": "dht-sensors-config-schema.coffee",
   "dependencies": {
