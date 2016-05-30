@@ -3,7 +3,7 @@ pimatic-dht-sensors
 
 Support for the DHT11 and DHT22 temperature and humidity sensor.
 
-**This plugin requries [wiringPi to be installed](http://wiringpi.com/download-and-install/)!**
+**This plugin requires [wiringPi to be installed](http://wiringpi.com/download-and-install/)!**
 
 ### Example config
 
