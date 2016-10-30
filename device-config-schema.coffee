@@ -7,10 +7,15 @@ module.exports = {
     properties:
       type:
         description: "The type of the sensor (11 or 22)"
-        type: "integer"
+        enum: [11, 22]
+      pinType:
+        description: "Defines the GPIO pin numbering scheme to be applied"
+        enum: ["BCM GPIO", "WiringPi R1", "WiringPi R2"]
+        default: "WiringPi R2"
       pin:
-        description: "The wiringPi pin"
+        description: "The GPIO pin"
         type: "integer"
+
       interval:
         interval: "Interval in ms to read the sensor, the minimal reading interval should be 2500"
         type: "integer"

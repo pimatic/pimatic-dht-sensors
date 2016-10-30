@@ -28,7 +28,7 @@
   },
   "configSchema": "dht-sensors-config-schema.coffee",
   "dependencies": {
-    "node-dht-sensor": "git+https://github.com/sweetpi/node-dht-sensor.git#v0.9.x"
+    "node-dht-sensor": "0.0.31"
   },
   "peerDependencies": {
     "pimatic": ">=0.8.0 <1.0.0"
