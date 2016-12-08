@@ -69,11 +69,11 @@ module.exports = (env) ->
         when "BCM GPIO"
           return pin
         when "WiringPi R1"
-          for index in gpio
-            return bcm1[index] if gpio[index] is pin
+          for own index, key of gpio
+            return bcm1[index] if key is pin
         when "WiringPi R2"
-          for index in gpio
-            return bcm2[index] if gpio[index] is pin
+          for own index, key of gpio
+            return bcm2[index] if key is pin
         else
           throw new Error "Invalid pinType #{pinType}"
 
