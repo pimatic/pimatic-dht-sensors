@@ -28,7 +28,7 @@
   },
   "configSchema": "dht-sensors-config-schema.coffee",
   "dependencies": {
-    "node-dht-sensor": "0.0.31"
+    "node-dht-sensor": "0.0.32"
   },
   "peerDependencies": {
     "pimatic": ">=0.8.0 <1.0.0"
